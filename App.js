@@ -33,7 +33,16 @@ const App = () => {
       <View style={ styles.container }>
         <StatusBar style="auto" />
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator 
+            screenOptions={{
+              headerStyle : {
+                backgroundColor : '#fff'
+              },
+              contentStyle : {
+                backgroundColor : 'yellow'
+              }
+            }}
+          >
             <Stack.Screen
               options={{ headerShown: false }}
               name="bottomTabs"

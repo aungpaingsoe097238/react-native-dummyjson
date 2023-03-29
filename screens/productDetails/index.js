@@ -1,6 +1,7 @@
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { useEffect, useState } from "react";
+import ProductDetailItem from "../../components/productDetailItem"
 
 const ProductDetails = () => {
   const route = useRoute()
@@ -28,9 +29,10 @@ const ProductDetails = () => {
 
   return (
     <View>
-      <Text>ProductDetails</Text>
+      <ProductDetailItem productDetailData={ productDetailData } />
     </View>
   );
 };
+
 
 export default ProductDetails;
