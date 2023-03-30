@@ -8,14 +8,14 @@ const ProductListing = () => {
   const { loading, products } = useContext(Context);
   const navigation = useNavigation()
 
-  if (loading) {
-    <ActivityIndicator size="large" color={"red"}></ActivityIndicator>;
-  }
-
   const handleOnPress = (getId) => {
     navigation.navigate('productdetails',{
       productId : getId
     });
+  }
+
+  if (loading) {
+    return <ActivityIndicator size="large" color={"red"}/>;
   }
 
   return (
